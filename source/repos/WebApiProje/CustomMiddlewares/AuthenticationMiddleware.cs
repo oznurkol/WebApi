@@ -30,10 +30,7 @@ namespace WebApiProje.CustomMiddlewares
                 //return;
             }
 
-            //web apilerde hang, tür ile authentice edildiğini aşağıdaki şekilde tanımlar
-            //basic (authentication türü) engin(kullanıcı adı):12345 (şifre) => basic engin:12345
-            //or token (authentication türü) engin(kullanıcı adı):12345 (şifre)
-            //yukarıdaki gibi data gönderilir
+           
                 
             //basic authentcation formatı => basic kolo:12345
             else if (authHeader != null && authHeader.StartsWith("basic",StringComparison.OrdinalIgnoreCase)) //autHeader da authentica değeri var mı ve basic le başlıyor mu
