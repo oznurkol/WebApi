@@ -46,7 +46,7 @@ namespace WebApiProje.CustomMiddlewares
                 {
                     context.Response.StatusCode = 500;
                 }
-                //elimde engin:12345 var
+                
                 var credentials = credentialString.Split(':');
                 if(credentials[0]=="kolo" && credentials[1] == "12345") //db kontrol olacak
                 {
