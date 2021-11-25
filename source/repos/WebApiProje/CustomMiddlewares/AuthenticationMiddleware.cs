@@ -35,7 +35,7 @@ namespace WebApiProje.CustomMiddlewares
             //or token (authentication türü) engin(kullanıcı adı):12345 (şifre)
             //yukarıdaki gibi data gönderilir
                 
-            //basic authentcation formatı => basic engin:12345
+            //basic authentcation formatı => basic kolo:12345
             else if (authHeader != null && authHeader.StartsWith("basic",StringComparison.OrdinalIgnoreCase)) //autHeader da authentica değeri var mı ve basic le başlıyor mu
             {
                 var token = authHeader.Substring(6).Trim(); //kullanıcı adı ve şifre kısmını aldımüstteki formattan
@@ -51,11 +51,9 @@ namespace WebApiProje.CustomMiddlewares
                 }
                 //elimde engin:12345 var
                 var credentials = credentialString.Split(':');
-                if(credentials[0]=="engin" && credentials[1] == "12345") //db kontrol olacak
+                if(credentials[0]=="kolo" && credentials[1] == "12345") //db kontrol olacak
                 {
-                    //bir principle tanımlamamız gerekiyor. princible bir identitydir
-                    //authorize da rol verip adminler bu işi yapabilir dediğimzde
-                    //bu bir principle olur bir claim olusturucaz
+                    
                     var claims = new[]
                     {
                         new Claim("name",credentials[0]),
