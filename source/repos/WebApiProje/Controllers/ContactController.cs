@@ -17,7 +17,7 @@ namespace WebApiProje.Controllers
         {
             return new List<ContactModel>
             {
-                new ContactModel{Id=1, FirstName="Engin", LastName="Demiroğ"}
+                new ContactModel{Id=1, FirstName="Öznur", LastName="Kol"}
             };
         }
     }
